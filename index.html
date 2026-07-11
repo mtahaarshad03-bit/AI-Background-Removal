@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Smart AI Background Remover</h1>
+        <p>Apni image upload karein aur AI ka jadoo dekhein</p>
+        
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <div class="upload-text">
+                <h3>Click to Upload or Drag & Drop</h3>
+                <p>PNG or JPG formats allowed</p>
+            </div>
+        </div>
+
+        <button id="processBtn" class="primary-btn" disabled>Remove Background</button>
+
+        <div class="loader" id="loader" style="display: none;">
+            <div class="spinner"></div>
+            <p>AI is processing your image...</p>
+        </div>
+
+        <div class="result-area" id="resultArea" style="display: none;">
+            <div class="image-box">
+                <h4>Original Image</h4>
+                <img id="originalImage" src="" alt="Original">
+            </div>
+            <div class="image-box">
+                <h4>AI Result</h4>
+                <img id="resultImage" src="" alt="Removed Background">
+                <a id="downloadBtn" class="download-btn" download="ai-result.png">Download Image</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
